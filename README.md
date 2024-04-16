@@ -8,7 +8,7 @@ Da die Datei mehrere Radiosignale enthielt, musste ich das gewünschte Signal he
 
 Um die Signale weiter zu trennen und das gewünschte Radiosignal klar zu empfangen, habe ich einen Tiefpassfilter mit einer Grenzfrequenz von etwa 40 kHz hinzugefügt. Dies war wichtig, um Störungen zu minimieren und das gewünschte Signal zu verstärken.
 
-Nachdem das Signal vorbereitet war, habe ich es über die Soundkarte wiedergegeben, um den Radiosender hören zu können. Es war wirklich aufregend, die Klänge über die Lautsprecher zu hören!
+Nachdem das Signal vorbereitet war, habe ich es über die Soundkarte wiedergegeben, um den Radiosender hören zu können. 
 
 Zuletzt habe ich das Eingangssignal visualisiert, um seine Charakteristiken besser zu verstehen. Hierbei kamen der "frequency sink" und der "waterfall sink" zum Einsatz. Diese Werkzeuge haben mir geholfen, das Spektrum und die Veränderungen im Signal im Laufe der Zeit zu erkennen.
 
