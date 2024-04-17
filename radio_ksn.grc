@@ -42,10 +42,10 @@ blocks:
     min_len: '200'
     orient: QtCore.Qt.Horizontal
     rangeType: int
-    start: '88500000'
-    step: '1'
-    stop: '93500000'
-    value: '91000000'
+    start: '-10000000'
+    step: '100000'
+    stop: '10000000'
+    value: '0'
     widget: counter_slider
   states:
     bus_sink: false
@@ -97,12 +97,12 @@ blocks:
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    quad_rate: 4e5
+    quad_rate: 2e5
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1040, 176.0]
+    coordinate: [1000, 176.0]
     rotation: 0
     state: true
 - name: audio_sink_0
@@ -114,12 +114,12 @@ blocks:
     device_name: ''
     num_inputs: '1'
     ok_to_block: 'True'
-    samp_rate: samp_rate
+    samp_rate: '48000'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1320, 184.0]
+    coordinate: [1448, 192.0]
     rotation: 0
     state: true
 - name: blocks_file_source_0
@@ -129,7 +129,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: /home/antonia.dzidzic/Downloads
+    file: /home/antonia.dzidzic/Downloads/radio.dat
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -170,7 +170,7 @@ blocks:
     beta: '6.76'
     comment: ''
     cutoff_freq: '40000'
-    decim: '1'
+    decim: '25'
     gain: '1'
     interp: '1'
     maxoutbuf: '0'
@@ -183,9 +183,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [752, 132.0]
+    coordinate: [752, 140.0]
     rotation: 0
-    state: bypassed
+    state: enabled
 - name: qtgui_freq_sink_x_1
   id: qtgui_freq_sink_x
   parameters:
@@ -216,8 +216,8 @@ blocks:
     color8: '"dark red"'
     color9: '"dark green"'
     comment: ''
-    ctrlpanel: 'False'
-    fc: freq_center
+    ctrlpanel: 'True'
+    fc: '0'
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
@@ -295,7 +295,7 @@ blocks:
     color8: '0'
     color9: '0'
     comment: ''
-    fc: freq_center
+    fc: '0'
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
@@ -328,15 +328,36 @@ blocks:
     coordinate: [744, 480.0]
     rotation: 0
     state: true
+- name: rational_resampler_xxx_0
+  id: rational_resampler_xxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    decim: '200000'
+    fbw: '0'
+    interp: '48000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    taps: '[]'
+    type: fff
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1256, 168.0]
+    rotation: 0
+    state: true
 
 connections:
 - [analog_sig_source_x_0, '0', blocks_multiply_xx_0, '1']
-- [analog_wfm_rcv_0, '0', audio_sink_0, '0']
+- [analog_wfm_rcv_0, '0', rational_resampler_xxx_0, '0']
 - [blocks_file_source_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_multiply_xx_0, '0', low_pass_filter_0, '0']
 - [blocks_multiply_xx_0, '0', qtgui_freq_sink_x_1, '0']
 - [blocks_multiply_xx_0, '0', qtgui_waterfall_sink_x_0, '0']
 - [low_pass_filter_0, '0', analog_wfm_rcv_0, '0']
+- [rational_resampler_xxx_0, '0', audio_sink_0, '0']
 
 metadata:
   file_format: 1
