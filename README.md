@@ -43,12 +43,11 @@ Samplerate bei allen Blöcken: 5 MHz
 
 ## Aufbau:
 
-![Screenshot_20240417_081957](https://github.com/Antonia1969/KSN/assets/131359444/210f7292-b0f9-4cff-8c33-521aa521575d)
-
+![Screenshot_20240417_091246](https://github.com/Antonia1969/KSN/assets/131359444/7cc19bd5-1252-4dfa-bb99-d9844cd815d3)
 
 ## Simulation: 
 
-![Screenshot_20240417_091246](https://github.com/Antonia1969/KSN/assets/131359444/7cc19bd5-1252-4dfa-bb99-d9844cd815d3)
+![Screenshot_20240417_091402](https://github.com/Antonia1969/KSN/assets/131359444/dc2b44ab-bbab-4446-95bc-fa7253e6721c)
 
 
 
