@@ -1,6 +1,6 @@
 # KSN - Arbeitsauftrag Antonia Dzidzic
 
-##### Thema: FM-Radioempfänger
+### Thema: FM-Radioempfänger
 
 In meinem GNURadio-Projekt habe ich einen FM-Radioempfänger gebaut, der sich als ziemlich spannend erwiesen hat. Statt eine physische Hardwarequelle zu verwenden, habe ich eine Dateiquelle eingefügt, um das Eingangssignal zu erhalten. Das war mein Ausgangspunkt.
 
@@ -12,12 +12,12 @@ Nachdem das Signal vorbereitet war, habe ich es über die Soundkarte wiedergegeb
 
 Zuletzt habe ich das Eingangssignal visualisiert, um seine Charakteristiken besser zu verstehen. Hierbei kamen der "frequency sink" und der "waterfall sink" zum Einsatz. Diese Werkzeuge haben mir geholfen, das Spektrum und die Veränderungen im Signal im Laufe der Zeit zu erkennen.
 
-##### Aufbau des FM-Receivers:
+### Aufbau des FM-Receivers:
 
 Die Blöcke müssen wie in der Abbildung ersichtlich verbunden werden.
 
 
-##### Erklärungen zu den gewählten Blöcken:
+### Erklärungen zu den gewählten Blöcken:
 
 File Source-Block liest die Audiodatei aus der Angabe ein.
 
@@ -33,7 +33,7 @@ Der WBFM Receive-Block demoduliert das FM-Signal.
 
 Der Audio Sink-Block dient dazu, die demodulierte Audio abzuspielen!!
 
-##### Konfiguration der Parameter:
+### Konfiguration der Parameter:
 
 Tiefpassfilter: Grenzfrequenz (40 kHz.)
 
