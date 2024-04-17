@@ -41,6 +41,9 @@ QT GUI Range-Block: Mittenfrequenz (91 MHz) (Start: 88.5M (-2.5M), Stop:93.5M(+2
 
 Samplerate bei allen Blöcken: 5 MHz
 
+## Aufbau:
+
+![Screenshot_20240417_081957](https://github.com/Antonia1969/KSN/assets/131359444/d5ce3b3f-e89b-4d83-8dd9-232c9678ec71)
 
 
 
